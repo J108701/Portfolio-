@@ -16,6 +16,7 @@ header {
 
 header h1 {
     margin: 0;
+    font-family: 'Glass Antiqua', cursive;
 }
 
 header p {
@@ -88,8 +89,49 @@ aside a {
 
 /* Style the footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #577abbe0;
+    color: #2a2929;
     text-align: center;
     padding: 10px;
 }
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    cursor: pointer;
+}
+
+/* Display the menu on small screens */
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    ul {
+        display: none; /* Hide the navigation menu by default */
+    }
+
+    ul.show-menu {
+        display: block; /* Show the navigation menu */
+    }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+/* Apply styling for odd and even classes */
+.styled-menu li.odd {
+    background-color: #dddddd;
+    padding: 30px;
+}
+
+.styled-menu li.even {
+    background-color: #bbbbbb;
+    padding: 30px;
+}
+
+/* Rest of your existing styles go here */
+
