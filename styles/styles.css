@@ -32,7 +32,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0e8a7e
+    color: #0e8a7e;
 }
 
 /* Show the navigation menu on larger screens */
@@ -43,6 +43,27 @@ nav a:hover {
 
     nav ul {
         display: block;
+    }
+
+    .mobile-icons {
+        display: none;
+    }
+}
+
+/* New styles for mobile icons */
+.mobile-icons {
+    display: none;
+    text-align: center;
+}
+
+/* Show mobile icons on smaller screens */
+@media screen and (max-width: 768px) {
+    .mobile-icons {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
     }
 }
 
@@ -57,6 +78,20 @@ header {
 header h1 {
     margin: 0;
     font-family: 'Glass Antiqua', cursive;
+    position: relative;
+}
+
+header h1:hover {
+    animation: flashColor 1s infinite;
+}
+
+@keyframes flashColor {
+    0%, 100% {
+        color: #f2f1f1; /* Original color */
+    }
+    50% {
+        color: #31d2a4; /* Flashing color */
+    }
 }
 
 header p {
@@ -83,35 +118,7 @@ footer {
     text-align: center;
     padding: 10px;
 }
-.styled-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: auto; /* Add this property to enable vertical scrolling */
-    max-height: 200px; /* Set a fixed height for the menu */
-}
 
-.styled-menu li {
-    background-color: #f8f8f8;
-    margin-bottom: 2px;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.styled-menu li:hover {
-    background-color: #e0e0e0;
-}
-
-
-/* Style the footer */
-footer {
-    background-color: #577abbe0;
-    color: #2a2929;
-    text-align: center;
-    padding: 10px;
-}
 .styled-menu {
     list-style-type: none;
     padding: 0;
@@ -134,12 +141,13 @@ footer {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
 }
+
 /* Add styles for the image gallery */
 #ImageGallery {
     text-align: center;
@@ -160,4 +168,8 @@ footer {
     width: 180px;
     height: 280px;
     margin-right: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
