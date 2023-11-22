@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Glass Antiqua', cursive;
     background-color: #90c2ff;
 }
 
@@ -109,6 +109,8 @@ section {
 
 section h1 {
     color: #1f1e1e;
+    font-family: 'Glass Antiqua', cursive;
+
 }
 
 /* Style the footer */
