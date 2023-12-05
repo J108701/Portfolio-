@@ -32,39 +32,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0e8a7e;
-}
-
-/* Show the navigation menu on larger screens */
-@media screen and (min-width: 769px) {
-    .menu-icon {
-        display: none;
-    }
-
-    nav ul {
-        display: block;
-    }
-
-    .mobile-icons {
-        display: none;
-    }
-}
-
-/* New styles for mobile icons */
-.mobile-icons {
-    display: none;
-    text-align: center;
-}
-
-/* Show mobile icons on smaller screens */
-@media screen and (max-width: 768px) {
-    .mobile-icons {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-    }
+    color: #93f06b;
 }
 
 /* Style the header */
@@ -110,9 +78,12 @@ section {
 section h1 {
     color: #1f1e1e;
     font-family: 'Glass Antiqua', cursive;
-
 }
 
+section h2 {
+    color: #1f1e1e;
+    font-family: 'Glass Antiqua', cursive;
+}
 /* Style the footer */
 footer {
     background-color: #577abbe0;
@@ -174,4 +145,121 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Add a class for the blackout effect */
+.blacked-out {
+    opacity: 0.5; /* You can adjust the opacity to your preference */
+    transition: opacity 0.3s; /* Add a transition for a smooth effect */
+}
+
+/* Add a class to highlight the section the user is pointing at */
+.highlighted-section {
+    background-color: #97dbf99f; /* You can choose the highlight color */
+    color: #fff; /* Text color for better visibility */
+}
+
+.curtain-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.curtain-menu-icon {
+    display: block;
+    cursor: pointer;
+}
+
+/* Show the navigation menu on larger screens */
+@media screen and (min-width: 769px) {
+    .curtain-menu{
+        display: none;
+    }
+        
+    .curtain-menu-icon{
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .styled-menu {
+        display: block;
+    }
+}
+
+/* Show mobile icons on smaller screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: block;
+    }
+
+    .styled-menu {
+        display: none;
+    }
+
+    .curtain-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .curtain-menu ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .curtain-menu li {
+        margin: 10px;
+    }
+
+    .curtain-menu a {
+        font-size: 18px;
+    }
+}
+
+.curtain-menu.show-curtain-menu {
+    display: flex;
+}
+
+.exit-cross {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.curtain-menu nav {
+    text-align: center;
+}
+
+.curtain-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.curtain-menu li {
+    margin: 20px;
+}
+
+.curtain-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.curtain-menu a:hover {
+    color: #0e8a7e;
 }
