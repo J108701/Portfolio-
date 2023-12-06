@@ -7,10 +7,6 @@ body {
 }
 
 /* Display the menu icon by default */
-.menu-icon {
-    display: block;
-    cursor: pointer;
-}
 
 /* Hide the navigation menu by default */
 nav ul {
