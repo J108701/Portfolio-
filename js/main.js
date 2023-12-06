@@ -1,13 +1,20 @@
-// Event listeners for section highlighting
 document.addEventListener("DOMContentLoaded", function () {
     var sections = document.querySelectorAll("section");
+    
+    
 
     sections.forEach(function (section) {
-        section.addEventListener("mouseenter", function () {
-            // Remove the blackout class from all sections
-            sections.forEach(function (s) {
-                s.classList.remove("blacked-out");
+        // Remove the blackout class initially 
+        sections.forEach(function (s) {
+            s.classList.remove("blacked-out");
+        });
+            section.addEventListener("mouseenter", function () {
+                // Remove the blackout class from all sections
+                sections.forEach(function (s) {
+                    s.classList.remove("blacked-out");
             });
+            
+            
 
             // Add the blackout class to all sections except the current one
             sections.forEach(function (s) {
@@ -28,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 
 // Curtain menu functions
 function toggleCurtainMenu() {

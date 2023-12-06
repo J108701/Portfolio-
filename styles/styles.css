@@ -145,13 +145,13 @@ html {
 
 /* Add a class for the blackout effect */
 .blacked-out {
-    opacity: 0.5; /* You can adjust the opacity to your preference */
+    opacity: 0.5; /* Set the initial opacity to 0.5*/
     transition: opacity 0.3s; /* Add a transition for a smooth effect */
 }
 
 /* Add a class to highlight the section the user is pointing at */
 .highlighted-section {
-    background-color: #97dbf99f; /* You can choose the highlight color */
+    background-color: #4d657c; 
     color: #fff; /* Text color for better visibility */
 }
 
